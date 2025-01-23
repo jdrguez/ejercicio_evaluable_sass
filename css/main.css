@@ -1,0 +1,20 @@
+.card {
+  background-color: #333;
+  height: 300px;
+  width: 500px;
+  margin: 25px;
+}
+.card img {
+  width: 200px;
+}
+.card h1 {
+  color: #ff69b4;
+}
+.card h3 {
+  color: #aaa;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}/*# sourceMappingURL=main.css.map */

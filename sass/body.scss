@@ -1,0 +1,22 @@
+$ancho: 500px;
+$altura: 300px;
+.card{
+    background-color: $background;
+    height: $altura;
+    width: $ancho;
+    margin: 25px;
+    
+    img{
+        width: $ancho * 0.4;
+    }
+
+
+    h1{
+        color: $main_color;
+    }
+    
+    h3{
+        color: $second_font_color;
+    }
+
+}
