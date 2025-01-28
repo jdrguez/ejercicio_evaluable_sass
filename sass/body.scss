@@ -1,22 +1,68 @@
-$ancho: 500px;
-$altura: 300px;
-.card{
-    background-color: $background;
-    height: $altura;
-    width: $ancho;
-    margin: 25px;
-    
-    img{
-        width: $ancho * 0.4;
-    }
+$common-margin: 15px;
 
+body {
+    margin: 0;
+    background-color: $primary-color;
+    font-family: 'Dancing Script', serif;
+}
 
-    h1{
-        color: $main_color;
+@mixin image($url) {
+    width: 40%;
+    height: 100%;
+    background: {
+        size: cover;
+        repeat: no-repeat;
+        position: center;
+        image: url($url);
     }
-    
-    h3{
-        color: $second_font_color;
-    }
+    border-radius: 20px 0px 0px 20px;
+}
 
+@mixin card-borders {
+    border: {
+        width: 1px;
+        style: solid;
+        color: $secondary-color;
+        radius: 20px
+    }
+    box-shadow: 0px 0px 15px $dark-color;
+}
+
+#card-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: $common-margin;
+    gap: $common-margin;
+    .card {
+        display: flex;
+        flex: 1 1 500px;
+        height: 300px;
+        @include card-borders;
+        background-color: $dark-color;
+        #image {
+            &-1 { @include image('/img/volcan1.jpeg'); }
+            &-2 { @include image('/img/volcan2.jpeg'); }
+            &-3 { @include image('/img/volcan3.jpeg'); }
+            &-4 { @include image('/img/volcan4.jpeg'); }
+        }
+        &-content {
+            width: 60%;
+            padding: 10px;
+        }
+        &-title {
+            margin-bottom: 0;
+            color: $secondary-color;
+            font: {
+                size: 32px;
+                weight: bold;
+            }
+        }
+        &-info {
+            margin-top: 10px;
+            color: $info-color;
+        }
+        &-body {
+            color: $primary-color;
+        }
+    }
 }
