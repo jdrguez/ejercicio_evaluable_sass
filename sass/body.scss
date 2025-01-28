@@ -45,10 +45,6 @@ body {
             &-3 { @include image('/img/volcan3.jpeg'); }
             &-4 { @include image('/img/volcan4.jpeg'); }
         }
-        &-content {
-            width: 60%;
-            padding: 10px;
-        }
         &-title {
             margin-bottom: 0;
             color: $secondary-color;
@@ -60,6 +56,10 @@ body {
         &-info {
             margin-top: 10px;
             color: $info-color;
+        }
+        &-content {
+            width: 60%;
+            padding: 10px;
         }
         &-body {
             color: $primary-color;
